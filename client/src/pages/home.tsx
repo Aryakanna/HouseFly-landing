@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { WaitlistForm } from "@/components/ui/waitlist-form";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, HomeIcon, TrendingUp, BarChart, Chrome } from "lucide-react";
+import { Shield, HomeIcon, TrendingUp, BarChart, Chrome, ArrowUpRight, ArrowDownRight } from "lucide-react";
+import { useState } from "react";
+import { Slider } from "@/components/ui/slider";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -11,6 +13,25 @@ const fadeIn = {
 };
 
 export default function HomePage() {
+  const [year, setYear] = useState(2025);
+  const safetyScores = {
+    2023: 72,
+    2024: 75,
+    2025: 78,
+    2026: 80,
+    2027: 83,
+  };
+  const priceChanges = {
+    2023: 700000,
+    2024: 725000,
+    2025: 750000,
+    2026: 780000,
+    2027: 810000,
+  };
+  const currentScore = safetyScores[year] || 78;
+  const currentPrice = priceChanges[year] || 750000;
+  const trendIcon = currentScore > (safetyScores[year - 1] || 75) ? ArrowUpRight : ArrowDownRight;
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -98,14 +119,39 @@ export default function HomePage() {
             className="mb-12"
           />
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img 
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <Card className="bg-white shadow-lg rounded-2xl overflow-hidden">
+              <img
                 src="https://images.unsplash.com/photo-1615015456178-ae6bb600b7ef"
                 alt="Modern neighborhood"
-                className="rounded-lg shadow-xl"
+                className="w-full h-[300px] object-cover"
               />
-            </div>
+              <CardContent className="p-6">
+                <h2 className="text-2xl font-semibold">1234 Elm Street, Springfield</h2>
+                <p className="text-muted-foreground">4 Beds | 3 Baths | 2,500 sqft</p>
+                <p className="text-xl mt-2">${currentPrice.toLocaleString()}</p>
+
+                <div className="mt-4 flex justify-between items-center">
+                  <div>
+                    <p className="text-muted-foreground mb-2">Forecast Year:</p>
+                    <Slider
+                      defaultValue={[2025]}
+                      min={2023}
+                      max={2027}
+                      step={1}
+                      onValueChange={(val) => setYear(val[0])}
+                      className="w-40"
+                    />
+                    <p className="text-sm text-muted-foreground mt-1">{year}</p>
+                  </div>
+                  <div className="flex items-center gap-2 bg-muted p-3 rounded-lg">
+                    <p className="text-lg font-bold">Safety Score: {currentScore}%</p>
+                    {trendIcon && <trendIcon className="text-green-500" size={20} />}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold">
                 Make Data-Driven Decisions
