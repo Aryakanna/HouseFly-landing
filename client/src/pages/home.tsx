@@ -46,11 +46,11 @@ export default function HomePage() {
           <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tighter">
             Know Your Neighborhood,<br />
             <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-              Secure Your Future
+              Predict Its Future
             </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Make informed decisions about where you live with our comprehensive neighborhood safety scoring and predictive analytics platform.
+            Make smarter real estate decisions with our AI-powered platform that predicts both neighborhood safety trends and property values based on comprehensive data analysis.
           </p>
           <div className="max-w-md mx-auto">
             <WaitlistForm />
@@ -63,7 +63,7 @@ export default function HomePage() {
         <div className="container mx-auto">
           <SectionHeading
             title="Why Choose Housefly?"
-            subtitle="Our intelligent platform helps you understand neighborhood safety and property value trends through advanced predictive analytics"
+            subtitle="Our intelligent platform combines safety analytics with property value forecasting to give you the complete picture of your investment potential"
             className="mb-12"
           />
 
@@ -73,7 +73,7 @@ export default function HomePage() {
                 <Shield className="h-12 w-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Safety Scoring</h3>
                 <p className="text-muted-foreground">
-                  Get detailed safety scores based on real crime data, community feedback, and infrastructure development plans.
+                  Get comprehensive safety scores powered by crime data, community feedback, and local development plans.
                 </p>
               </CardContent>
             </Card>
@@ -83,7 +83,7 @@ export default function HomePage() {
                 <TrendingUp className="h-12 w-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Smart Predictions</h3>
                 <p className="text-muted-foreground">
-                  Our AI analyzes local regulations, planned infrastructure, and real estate trends to predict future neighborhood value.
+                  Our AI forecasts both safety trends and property values using regulatory changes and development plans.
                 </p>
               </CardContent>
             </Card>
@@ -93,7 +93,7 @@ export default function HomePage() {
                 <Chrome className="h-12 w-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Seamless Integration</h3>
                 <p className="text-muted-foreground">
-                  Use our Chrome extension to see safety scores directly on Zillow and other real estate platforms.
+                  Use our Chrome extension to see safety scores and price predictions directly on real estate platforms.
                 </p>
               </CardContent>
             </Card>
@@ -103,7 +103,7 @@ export default function HomePage() {
                 <BarChart className="h-12 w-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Data Insights</h3>
                 <p className="text-muted-foreground">
-                  Access comprehensive reports with detailed safety metrics and future value predictions.
+                  Access detailed reports with safety metrics, value predictions, and future development impact analysis.
                 </p>
               </CardContent>
             </Card>
@@ -121,7 +121,7 @@ export default function HomePage() {
                   "Hello, my name is Jacob..."
                 </h3>
                 <p className="text-lg text-muted-foreground italic">
-                  "As a first-time homebuyer, I was worried about investing in an up-and-coming neighborhood. Housefly showed me that the area was getting a new transit station and several mixed-use developments in the next few years. Their safety score predictions helped me make a confident decision, and now my property value has increased by 15% in just one year thanks to those improvements!"
+                  "As a first-time homebuyer, I wanted both safety and investment potential. Housefly showed me that the area was getting a new transit station and several mixed-use developments. Not only did their safety score predictions give me peace of mind, but they also accurately forecasted a 15% property value increase due to these improvements. Thanks to Housefly, I found a safe neighborhood with great investment returns!"
                 </p>
                 <div className="flex items-center gap-4">
                   <div>
@@ -140,7 +140,7 @@ export default function HomePage() {
         <div className="container mx-auto">
           <SectionHeading
             title="See Your Neighborhood Score"
-            subtitle="Get instant access to safety metrics and future predictions"
+            subtitle="Get instant access to safety metrics and value predictions"
             className="mb-12"
           />
 
@@ -182,7 +182,7 @@ export default function HomePage() {
                 Make Data-Driven Decisions
               </h3>
               <p className="text-lg text-muted-foreground">
-                Our advanced algorithm considers planned infrastructure projects, upcoming zoning changes, and local government initiatives to provide accurate safety scores and property value predictions.
+                Our advanced algorithm analyzes upcoming infrastructure projects, zoning changes, and local initiatives to forecast both safety scores and property values. Get insights into how future developments will impact your investment before anyone else.
               </p>
               <div className="pt-4">
                 <WaitlistForm />
