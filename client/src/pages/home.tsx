@@ -114,23 +114,32 @@ export default function HomePage() {
       {/* Testimonial Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <Card className="max-w-3xl mx-auto">
-            <CardContent className="p-8">
-              <div className="space-y-6">
-                <h3 className="text-2xl font-semibold">
-                  "Hello, my name is Jacob..."
-                </h3>
-                <p className="text-lg text-muted-foreground italic">
-                  "As a first-time homebuyer, I wanted both safety and investment potential. Housefly showed me that the area was getting a new transit station and several mixed-use developments. Not only did their safety score predictions give me peace of mind, but they also accurately forecasted a 15% property value increase due to these improvements. Thanks to Housefly, I found a safe neighborhood with great investment returns!"
-                </p>
-                <div className="flex items-center gap-4">
-                  <div>
-                    <p className="font-semibold">Jacob Thompson</p>
-                    <p className="text-sm text-muted-foreground">Homeowner in Austin, TX</p>
+          <Card className="max-w-4xl mx-auto overflow-hidden">
+            <div className="grid md:grid-cols-2 items-center">
+              <div className="hidden md:block h-full">
+                <img
+                  src="https://raw.githubusercontent.com/replit/studio-core/main/landing-page-templates/assets/static/headshots/professional-1.png"
+                  alt="Jacob Thompson"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-8">
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-semibold">
+                    "Hello, my name is Jacob..."
+                  </h3>
+                  <p className="text-lg text-muted-foreground italic">
+                    "As a first-time homebuyer, I wanted both safety and investment potential. Housefly showed me that the area was getting a new transit station and several mixed-use developments. Not only did their safety score predictions give me peace of mind, but they also accurately forecasted a 15% property value increase due to these improvements. Thanks to Housefly, I found a safe neighborhood with great investment returns!"
+                  </p>
+                  <div className="flex items-center gap-4">
+                    <div>
+                      <p className="font-semibold">Jacob Thompson</p>
+                      <p className="text-sm text-muted-foreground">Homeowner in Austin, TX</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </CardContent>
+              </CardContent>
+            </div>
           </Card>
         </div>
       </section>
