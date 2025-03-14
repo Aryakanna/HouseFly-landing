@@ -111,8 +111,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Preview Section */}
+      {/* Testimonial Section */}
       <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <Card className="max-w-3xl mx-auto">
+            <CardContent className="p-8">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold">
+                  "Hello, my name is Jacob..."
+                </h3>
+                <p className="text-lg text-muted-foreground italic">
+                  "As a first-time homebuyer, I was worried about investing in an up-and-coming neighborhood. Housefly showed me that the area was getting a new transit station and several mixed-use developments in the next few years. Their safety score predictions helped me make a confident decision, and now my property value has increased by 15% in just one year thanks to those improvements!"
+                </p>
+                <div className="flex items-center gap-4">
+                  <div>
+                    <p className="font-semibold">Jacob Thompson</p>
+                    <p className="text-sm text-muted-foreground">Homeowner in Austin, TX</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Preview Section */}
+      <section className="py-20 px-4 bg-muted/50">
         <div className="container mx-auto">
           <SectionHeading
             title="See Your Neighborhood Score"
@@ -165,30 +189,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonial Section */}
-      <section className="py-20 px-4 bg-muted/50">
-        <div className="container mx-auto">
-          <Card className="max-w-3xl mx-auto">
-            <CardContent className="p-8">
-              <div className="space-y-6">
-                <h3 className="text-2xl font-semibold">
-                  "Hello, my name is Jacob..."
-                </h3>
-                <p className="text-lg text-muted-foreground italic">
-                  "As a first-time homebuyer, I was worried about investing in an up-and-coming neighborhood. Housefly showed me that the area was getting a new transit station and several mixed-use developments in the next few years. Their safety score predictions helped me make a confident decision, and now my property value has increased by 15% in just one year thanks to those improvements!"
-                </p>
-                <div className="flex items-center gap-4">
-                  <div>
-                    <p className="font-semibold">Jacob Thompson</p>
-                    <p className="text-sm text-muted-foreground">Homeowner in Austin, TX</p>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
     </div>
