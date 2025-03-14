@@ -3,6 +3,7 @@ import { WaitlistForm } from "@/components/ui/waitlist-form";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, HomeIcon, TrendingUp, BarChart } from "lucide-react";
+import { BugTrail } from "@/components/ui/bug-trail";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -13,6 +14,7 @@ const fadeIn = {
 export default function HomePage() {
   return (
     <div className="min-h-screen">
+      <BugTrail />
       {/* Hero Section */}
       <section className="relative py-20 px-4 md:py-32">
         <motion.div 
