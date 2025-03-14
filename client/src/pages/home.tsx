@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Shield, HomeIcon, TrendingUp, BarChart, Chrome, ArrowUpRight, ArrowDownRight } from "lucide-react";
 import { useState } from "react";
 import { Slider } from "@/components/ui/slider";
+import React from 'react';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -28,9 +29,9 @@ export default function HomePage() {
     2026: 780000,
     2027: 810000,
   };
-  const currentScore = safetyScores[year] || 78;
-  const currentPrice = priceChanges[year] || 750000;
-  const trendIcon = currentScore > (safetyScores[year - 1] || 75) ? ArrowUpRight : ArrowDownRight;
+  const currentScore = safetyScores[year as keyof typeof safetyScores] || 78;
+  const currentPrice = priceChanges[year as keyof typeof priceChanges] || 750000;
+  const trendIcon = currentScore > (safetyScores[(year - 1) as keyof typeof safetyScores] || 75) ? ArrowUpRight : ArrowDownRight;
 
   return (
     <div className="min-h-screen">
@@ -49,7 +50,7 @@ export default function HomePage() {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Make informed decisions about where you live with our comprehensive neighborhood safety scoring platform.
+            Make informed decisions about where you live with our comprehensive neighborhood safety scoring and predictive analytics platform.
           </p>
           <div className="max-w-md mx-auto">
             <WaitlistForm />
@@ -62,7 +63,7 @@ export default function HomePage() {
         <div className="container mx-auto">
           <SectionHeading
             title="Why Choose Housefly?"
-            subtitle="Our intelligent platform helps you understand neighborhood safety through data-driven insights"
+            subtitle="Our intelligent platform helps you understand neighborhood safety and property value trends through advanced predictive analytics"
             className="mb-12"
           />
 
@@ -72,7 +73,7 @@ export default function HomePage() {
                 <Shield className="h-12 w-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Safety Scoring</h3>
                 <p className="text-muted-foreground">
-                  Get detailed safety scores based on real crime data and community feedback.
+                  Get detailed safety scores based on real crime data, community feedback, and infrastructure development plans.
                 </p>
               </CardContent>
             </Card>
@@ -82,7 +83,7 @@ export default function HomePage() {
                 <TrendingUp className="h-12 w-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Smart Predictions</h3>
                 <p className="text-muted-foreground">
-                  Track neighborhood trends with AI-powered analysis of real-time news and government regulations.
+                  Our AI analyzes local regulations, planned infrastructure, and real estate trends to predict future neighborhood value.
                 </p>
               </CardContent>
             </Card>
@@ -102,7 +103,7 @@ export default function HomePage() {
                 <BarChart className="h-12 w-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Data Insights</h3>
                 <p className="text-muted-foreground">
-                  Access comprehensive reports with detailed safety metrics and analysis.
+                  Access comprehensive reports with detailed safety metrics and future value predictions.
                 </p>
               </CardContent>
             </Card>
@@ -115,7 +116,7 @@ export default function HomePage() {
         <div className="container mx-auto">
           <SectionHeading
             title="See Your Neighborhood Score"
-            subtitle="Get instant access to safety metrics that matter"
+            subtitle="Get instant access to safety metrics and future predictions"
             className="mb-12"
           />
 
@@ -146,7 +147,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-2 bg-muted p-3 rounded-lg">
                     <p className="text-lg font-bold">Safety Score: {currentScore}%</p>
-                    {trendIcon && <trendIcon className="text-green-500" size={20} />}
+                    {React.createElement(trendIcon, { className: "text-green-500", size: 20 })}
                   </div>
                 </div>
               </CardContent>
@@ -157,13 +158,37 @@ export default function HomePage() {
                 Make Data-Driven Decisions
               </h3>
               <p className="text-lg text-muted-foreground">
-                Whether you're buying a home, renting an apartment, or just want to stay informed, Housefly provides the insights you need to make confident decisions about where you live.
+                Our advanced algorithm considers planned infrastructure projects, upcoming zoning changes, and local government initiatives to provide accurate safety scores and property value predictions.
               </p>
               <div className="pt-4">
                 <WaitlistForm />
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Testimonial Section */}
+      <section className="py-20 px-4 bg-muted/50">
+        <div className="container mx-auto">
+          <Card className="max-w-3xl mx-auto">
+            <CardContent className="p-8">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold">
+                  "Hello, my name is Jacob..."
+                </h3>
+                <p className="text-lg text-muted-foreground italic">
+                  "As a first-time homebuyer, I was worried about investing in an up-and-coming neighborhood. Housefly showed me that the area was getting a new transit station and several mixed-use developments in the next few years. Their safety score predictions helped me make a confident decision, and now my property value has increased by 15% in just one year thanks to those improvements!"
+                </p>
+                <div className="flex items-center gap-4">
+                  <div>
+                    <p className="font-semibold">Jacob Thompson</p>
+                    <p className="text-sm text-muted-foreground">Homeowner in Austin, TX</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
     </div>
