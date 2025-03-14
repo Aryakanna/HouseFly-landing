@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { WaitlistForm } from "@/components/ui/waitlist-form";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, HomeIcon, TrendingUp, BarChart } from "lucide-react";
+import { Shield, HomeIcon, TrendingUp, BarChart, Chrome } from "lucide-react";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -45,7 +45,7 @@ export default function HomePage() {
             className="mb-12"
           />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardContent className="pt-6">
                 <Shield className="h-12 w-12 text-primary mb-4" />
@@ -59,9 +59,19 @@ export default function HomePage() {
             <Card>
               <CardContent className="pt-6">
                 <TrendingUp className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Trend Analysis</h3>
+                <h3 className="text-xl font-semibold mb-2">Smart Predictions</h3>
                 <p className="text-muted-foreground">
-                  Track neighborhood safety trends over time to make informed decisions.
+                  Track neighborhood trends with AI-powered analysis of real-time news and government regulations.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="pt-6">
+                <Chrome className="h-12 w-12 text-primary mb-4" />
+                <h3 className="text-xl font-semibold mb-2">Seamless Integration</h3>
+                <p className="text-muted-foreground">
+                  Use our Chrome extension to see safety scores directly on Zillow and other real estate platforms.
                 </p>
               </CardContent>
             </Card>
