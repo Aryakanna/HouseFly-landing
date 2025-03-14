@@ -5,23 +5,27 @@ import { Bug } from "lucide-react";
 export function BugTrail() {
   const [position, setPosition] = useState({ x: 100, y: 100 });
   const { scrollY } = useScroll();
-  
+
   // Smooth out the scroll position
   const smoothY = useSpring(scrollY);
-  
+
   useEffect(() => {
-    // Update bug position based on scroll
+    // Update bug position based on scroll within hero section
     const unsubscribe = smoothY.on("change", (latest) => {
-      const newX = Math.sin(latest * 0.003) * 200 + window.innerWidth / 2;
-      const newY = 100 + latest * 0.5;
-      setPosition({ x: newX, y: newY });
+      // Only move if we're in the hero section (100vh)
+      if (latest < window.innerHeight) {
+        const newX = Math.sin(latest * 0.005) * 200 + window.innerWidth / 2;
+        // Limit Y movement to stay within hero section
+        const newY = Math.min(window.innerHeight - 50, 100 + latest * 0.3);
+        setPosition({ x: newX, y: newY });
+      }
     });
-    
+
     return () => unsubscribe();
   }, [smoothY]);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-50">
+    <div className="fixed inset-0 pointer-events-none z-50" style={{ height: '100vh' }}>
       {/* Trail effect */}
       <motion.div
         className="absolute w-4 h-4 border-2 border-dashed border-primary rounded-full"
@@ -38,7 +42,7 @@ export function BugTrail() {
           mass: 0.5,
         }}
       />
-      
+
       {/* Bug icon */}
       <motion.div
         className="absolute text-primary"
