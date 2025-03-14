@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 export function WaitlistForm() {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
-  
+
   const form = useForm({
     resolver: zodResolver(insertWaitlistSchema),
     defaultValues: {
@@ -71,7 +71,7 @@ export function WaitlistForm() {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <div className="flex gap-2">
+                <div className="flex gap-2 justify-center w-full">
                   <Input
                     placeholder="Enter your email"
                     className="max-w-sm"
