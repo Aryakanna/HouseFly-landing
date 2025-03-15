@@ -60,7 +60,7 @@ export default function HomePage() {
               className="w-full"
               asChild
             >
-              <a href="https://v0-house-fly.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <a href="https://v0-safety-score-algorithm.vercel.app/" target="_blank" rel="noopener noreferrer">
                 Try a Demo
               </a>
             </Button>
