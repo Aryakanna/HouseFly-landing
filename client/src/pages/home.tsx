@@ -193,8 +193,17 @@ export default function HomePage() {
               <p className="text-lg text-muted-foreground">
                 Our advanced algorithm analyzes upcoming infrastructure projects, zoning changes, and local initiatives to forecast both safety scores and property values. Get insights into how future developments will impact your investment before anyone else.
               </p>
-              <div className="pt-4">
+              <div className="pt-4 space-y-4">
                 <WaitlistForm />
+                <Button 
+                  variant="secondary"
+                  className="w-full"
+                  asChild
+                >
+                  <a href="https://v0-house-fly.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    Try a Demo
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
