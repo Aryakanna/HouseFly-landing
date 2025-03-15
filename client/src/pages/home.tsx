@@ -45,13 +45,13 @@ export default function HomePage() {
           animate="animate"
           variants={fadeIn}
         >
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tighter text-white">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tighter">
             Know Your Neighborhood,<br />
             <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
               Predict Its Future
             </span>
           </h1>
-          <p className="text-xl text-white max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Make smarter real estate decisions with our AI-powered platform that predicts both neighborhood safety trends and property values based on comprehensive data analysis.
           </p>
           <div className="max-w-md mx-auto space-y-4">
