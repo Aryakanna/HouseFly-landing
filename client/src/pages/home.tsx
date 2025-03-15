@@ -15,6 +15,15 @@ const fadeIn = {
   transition: { duration: 0.5 }
 };
 
+const logoStyle = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  padding: '1rem',
+  fontSize: '1.5rem',
+};
+
+
 export default function HomePage() {
   const [year, setYear] = useState(2025);
   const safetyScores = {
@@ -37,6 +46,9 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      <div style={logoStyle} className="text-primary">
+        HouseFly
+      </div>
       <BugTrail />
       {/* Hero Section */}
       <section className="relative py-20 px-4 md:py-32">
