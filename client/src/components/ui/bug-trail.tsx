@@ -19,7 +19,7 @@ export function BugTrail() {
     <div className="fixed inset-0 pointer-events-none z-0">
       {/* Trail effect */}
       <motion.div
-        className="absolute w-4 h-4 border-2 border-dashed border-primary rounded-full"
+        className="absolute w-4 h-4 border-2 border-dashed border-muted/50 rounded-full bg-muted/50"
         initial={false}
         animate={{
           x: position.x,
@@ -36,7 +36,7 @@ export function BugTrail() {
 
       {/* Bug icon */}
       <motion.div
-        className="absolute text-primary"
+        className="absolute text-muted/50"
         initial={false}
         animate={{
           x: position.x - 12,
