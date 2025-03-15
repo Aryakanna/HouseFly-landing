@@ -166,7 +166,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <Card className="bg-white shadow-lg rounded-2xl overflow-hidden">
               <img
-                src="/storage/photos/1234_elm_street.jpg"
+                src="https://images.unsplash.com/photo-1518780664697-55e3ad937233"
                 alt="1234 Elm Street Property"
                 className="w-full h-[300px] object-cover"
                 onError={(e) => {
