@@ -166,8 +166,8 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <Card className="bg-white shadow-lg rounded-2xl overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1615015456178-ae6bb600b7ef"
-                alt="Modern neighborhood"
+                src="/storage/photos/1234_elm_street.jpg"
+                alt="1234 Elm Street Property"
                 className="w-full h-[300px] object-cover"
               />
               <CardContent className="p-6">
