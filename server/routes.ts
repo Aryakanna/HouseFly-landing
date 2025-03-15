@@ -20,6 +20,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       const entry = await storage.createWaitlistEntry(data);
+      await addEmailToSheet(data.email);
       res.status(201).json(entry);
     } catch (error) {
       if (error instanceof ZodError) {
