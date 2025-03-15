@@ -169,6 +169,10 @@ export default function HomePage() {
                 src="/storage/photos/1234_elm_street.jpg"
                 alt="1234 Elm Street Property"
                 className="w-full h-[300px] object-cover"
+                onError={(e) => {
+                  const img = e.target as HTMLImageElement;
+                  img.src = "https://images.unsplash.com/photo-1518780664697-55e3ad937233";
+                }}
               />
               <CardContent className="p-6">
                 <h2 className="text-2xl font-semibold">1234 Elm Street, Springfield</h2>
