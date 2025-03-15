@@ -128,7 +128,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2 items-center">
               <div className="hidden md:block h-full">
                 <img
-                  src="https://raw.githubusercontent.com/replit/studio-core/main/landing-page-templates/assets/static/headshots/professional-1.png"
+                  src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=800&auto=format&fit=crop"
                   alt="Jacob Thompson"
                   className="w-full h-full object-cover"
                 />
