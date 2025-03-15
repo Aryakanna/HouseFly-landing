@@ -37,7 +37,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 md:py-32">
+      <section className="relative py-20 px-4 md:py-32 bg-[url('/neighborhood-bg.webp')] bg-cover bg-center bg-no-repeat before:content-[''] before:absolute before:inset-0 before:bg-black/50">
         <motion.div 
           className="container mx-auto text-center space-y-8"
           initial="initial"
