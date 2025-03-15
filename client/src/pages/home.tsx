@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { WaitlistForm } from "@/components/ui/waitlist-form";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Shield, HomeIcon, TrendingUp, BarChart, Chrome, ArrowUpRight, ArrowDownRight } from "lucide-react";
 import { useState } from "react";
 import { Slider } from "@/components/ui/slider";
@@ -52,8 +53,17 @@ export default function HomePage() {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Make smarter real estate decisions with our AI-powered platform that predicts both neighborhood safety trends and property values based on comprehensive data analysis.
           </p>
-          <div className="max-w-md mx-auto">
+          <div className="max-w-md mx-auto space-y-4">
             <WaitlistForm />
+            <Button 
+              variant="secondary"
+              className="w-full"
+              asChild
+            >
+              <a href="https://v0-house-fly.vercel.app/" target="_blank" rel="noopener noreferrer">
+                Try a Demo
+              </a>
+            </Button>
           </div>
         </motion.div>
       </section>
