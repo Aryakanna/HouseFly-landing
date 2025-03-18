@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { WaitlistForm } from "@/components/ui/waitlist-form";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -23,8 +22,7 @@ const logoStyle = {
   fontSize: '1.5rem',
 };
 
-
-export default function HomePage() {
+export default function Home() {
   const [year, setYear] = useState(2025);
   const safetyScores = {
     2023: 72,
@@ -50,7 +48,6 @@ export default function HomePage() {
         HouseFly
       </div>
       <BugTrail />
-      {/* Hero Section */}
       <section className="relative py-20 px-4 md:py-32">
         <motion.div 
           className="container mx-auto text-center space-y-8"
@@ -67,8 +64,7 @@ export default function HomePage() {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Make smarter real estate decisions with our AI-powered platform that predicts both neighborhood safety trends and property values based on comprehensive data analysis.
           </p>
-          <div className="max-w-md mx-auto space-y-4">
-            <WaitlistForm />
+          <div className="max-w-md mx-auto">
             <Button 
               variant="secondary"
               className="w-full"
@@ -221,9 +217,6 @@ export default function HomePage() {
               <p className="text-lg text-muted-foreground">
                 Our advanced algorithm analyzes upcoming infrastructure projects, zoning changes, and local initiatives to forecast both safety scores and property values. Get insights into how future developments will impact your investment before anyone else.
               </p>
-              <div className="pt-4">
-                <WaitlistForm />
-              </div>
             </div>
           </div>
         </div>
