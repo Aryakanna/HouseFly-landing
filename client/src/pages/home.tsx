@@ -266,10 +266,13 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <div className="max-w-md mx-auto mt-12">
+            <div className="max-w-2xl mx-auto mt-12 text-center">
+              <p className="text-lg text-muted-foreground mb-4">
+                Explore our Investor Dashboard with a free demo—access real-time, comprehensive insights into San Francisco real estate, updated to keep you ahead!
+              </p>
               <Button 
-                variant="secondary"
-                className="w-full"
+                variant="outline"
+                className="w-[500px] bg-white text-primary hover:bg-white/90"
                 asChild
               >
                 <a href="https://v0-safety-score-algorithm.vercel.app/" target="_blank" rel="noopener noreferrer">
