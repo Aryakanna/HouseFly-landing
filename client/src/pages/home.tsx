@@ -232,12 +232,12 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <Card className="bg-card shadow-lg rounded-2xl overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1518780664697-55e3ad937233"
+                src="/images/charming-yellow-house.jpg"
                 alt="1234 Elm Street Property"
                 className="w-full h-[300px] object-cover"
                 onError={(e) => {
                   const img = e.target as HTMLImageElement;
-                  img.src = "https://images.unsplash.com/photo-1518780664697-55e3ad937233";
+                  img.src = "/images/charming-yellow-house.jpg";
                 }}
               />
               <CardContent className="p-6">
