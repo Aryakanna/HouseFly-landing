@@ -139,7 +139,7 @@ export default function Home() {
             subtitle="Our comprehensive analysis combines multiple data sources to give you the most accurate picture of neighborhood safety and development. Get insights into how future developments will impact your investment before anyone else."
             className="mb-12"
           />
-          
+
           <div className="flex justify-between items-start space-x-8 mb-16">
             <div className="flex-1">
               <div className="flex items-center mb-4">
@@ -263,13 +263,16 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold">
-                Make Data-Driven Decisions
-              </h3>
-              <p className="text-lg text-muted-foreground">
-                Our advanced algorithm analyzes upcoming infrastructure projects, zoning changes, and local initiatives to forecast both safety scores and property values. Get insights into how future developments will impact your investment before anyone else.
-              </p>
+            <div className="max-w-md mx-auto mt-12">
+              <Button 
+                variant="secondary"
+                className="w-full"
+                asChild
+              >
+                <a href="https://v0-safety-score-algorithm.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  Try a Demo
+                </a>
+              </Button>
             </div>
           </div>
         </div>
