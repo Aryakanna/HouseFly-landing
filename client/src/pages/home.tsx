@@ -142,6 +142,7 @@ export default function Home() {
 
           <div className="flex justify-between items-start space-x-8 mb-16">
             <div className="flex-1">
+              <img src="/images/safety-analysis.png" alt="Safety Analysis" className="w-full h-48 object-cover rounded-lg mb-6" />
               <div className="flex items-center mb-4">
                 <Shield className="h-12 w-12 text-primary mr-3" />
                 <h3 className="text-xl font-semibold">Safety News Analysis</h3>
@@ -156,6 +157,7 @@ export default function Home() {
             <div className="w-px h-48 bg-border"></div>
 
             <div className="flex-1">
+              <img src="/images/crime-data.png" alt="Crime Data" className="w-full h-48 object-cover rounded-lg mb-6" />
               <div className="flex items-center mb-4">
                 <BarChart className="h-12 w-12 text-primary mr-3" />
                 <h3 className="text-xl font-semibold">Real-Time Crime Data</h3>
@@ -170,6 +172,7 @@ export default function Home() {
             <div className="w-px h-48 bg-border"></div>
 
             <div className="flex-1">
+              <img src="/images/infrastructure.png" alt="Infrastructure" className="w-full h-48 object-cover rounded-lg mb-6" />
               <div className="flex items-center mb-4">
                 <TrendingUp className="h-12 w-12 text-primary mr-3" />
                 <h3 className="text-xl font-semibold">Infrastructure Projects</h3>
