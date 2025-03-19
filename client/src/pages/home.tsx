@@ -62,7 +62,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Make smarter real estate decisions with our AI-powered platform that predicts both neighborhood safety trends and property values based on comprehensive data analysis.
+            Make smarter real estate decisions with our AI-powered platform that predicts neighborhood safety and property values using your firm's localized data.
           </p>
           <div className="max-w-md mx-auto">
             <Button 
