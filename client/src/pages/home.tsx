@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* What HouseFly Does Section */}
-      <section className="py-20 px-4 bg-background">
+      <section className="py-10 px-4 bg-background">
         <div className="container mx-auto">
           <SectionHeading
             title="What HouseFly Does"
