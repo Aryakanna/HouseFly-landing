@@ -71,7 +71,7 @@ export default function Home() {
               asChild
             >
               <a href="https://v0-safety-score-algorithm.vercel.app/" target="_blank" rel="noopener noreferrer">
-                Explore our Investor Dashboard with a free demo—access real-time, comprehensive insights into San Francisco real estate, updated to keep you ahead!
+                Try a Demo
               </a>
             </Button>
           </div>
@@ -273,7 +273,7 @@ export default function Home() {
                 asChild
               >
                 <a href="https://v0-safety-score-algorithm.vercel.app/" target="_blank" rel="noopener noreferrer">
-                  Explore our Investor Dashboard with a free demo—access real-time, comprehensive insights into San Francisco real estate, updated to keep you ahead!
+                  Try a Demo
                 </a>
               </Button>
             </div>
