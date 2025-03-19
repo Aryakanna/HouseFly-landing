@@ -131,6 +131,58 @@ export default function Home() {
         </div>
       </section>
 
+      {/* What HouseFly Does Section */}
+      <section className="py-20 px-4 bg-background">
+        <div className="container mx-auto">
+          <SectionHeading
+            title="What HouseFly Does"
+            subtitle="Our comprehensive analysis combines multiple data sources to give you the most accurate picture of neighborhood safety and development"
+            className="mb-12"
+          />
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <Card>
+              <CardContent className="pt-6">
+                <Shield className="h-12 w-12 text-primary mb-4" />
+                <h3 className="text-xl font-semibold mb-2">Safety News Analysis</h3>
+                <p className="text-muted-foreground">
+                  We analyze and categorize local news within a 10-mile radius as positive, neutral, or negative to give you comprehensive safety insights.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="pt-6">
+                <BarChart className="h-12 w-12 text-primary mb-4" />
+                <h3 className="text-xl font-semibold mb-2">Real-Time Crime Data</h3>
+                <p className="text-muted-foreground">
+                  Access up-to-the-minute crime statistics through direct integration with the FBI's Uniform Crime Reporting (UCR) system.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="pt-6">
+                <TrendingUp className="h-12 w-12 text-primary mb-4" />
+                <h3 className="text-xl font-semibold mb-2">Infrastructure Projects</h3>
+                <p className="text-muted-foreground">
+                  Stay informed about local development, construction projects, and improvements that impact property values and neighborhood quality.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="space-y-6">
+            <h3 className="text-2xl font-semibold">
+              Make Data-Driven Decisions
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Our advanced algorithm analyzes upcoming infrastructure projects, zoning changes, and local initiatives to forecast both safety scores and property values. Get insights into how future developments will impact your investment before anyone else.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonial Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
