@@ -154,7 +154,9 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="flex-1 bg-card rounded-xl p-6 shadow-sm">
+            <div className="w-px h-48 bg-border"></div>
+
+            <div className="flex-1">
               <img src="/images/crime-data.png" alt="Crime Data" className="w-full h-48 object-cover rounded-lg mb-6" />
               <div className="flex items-center mb-4">
                 <BarChart className="h-12 w-12 text-primary mr-3" />
@@ -167,7 +169,9 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="flex-1 bg-card rounded-xl p-6 shadow-sm">
+            <div className="w-px h-48 bg-border"></div>
+
+            <div className="flex-1">
               <img src="/images/infrastructure.png" alt="Infrastructure" className="w-full h-48 object-cover rounded-lg mb-6" />
               <div className="flex items-center mb-4">
                 <TrendingUp className="h-12 w-12 text-primary mr-3" />
