@@ -10,15 +10,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { address } = req.params;
       const { photoData } = req.body;
-
-      const sanitizedAddress = address.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase();
-      const photoPath = path.join(__dirname, "../storage/photos", `${sanitizedAddress}.jpg`);
-
-      // Convert base64 to buffer and save
-      const buffer = Buffer.from(photoData.split(',')[1], 'base64');
-      await writeFile(photoPath, buffer);
-
-      res.json({ success: true, path: photoPath });
+      
+      await StorageService.init();
+      const photoUrl = await StorageService.savePhoto(address, photoData);
+      
+      res.json({ success: true, url: photoUrl });
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: "Failed to update photo" });
